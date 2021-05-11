@@ -5,18 +5,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php
+$pageid = 'home';
+include 'assets/twittercard.php'; ?>
   <title>siteyuh.com</title>
   <link rel="stylesheet" href="/assets/bind.css">
+  <link rel="canonical" href="https://siteyuh.com<?=$_SERVER['REQUEST_URI']?>">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7G89FV891V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7G89FV891V');
+  </script>
 </head>
 
 <body>
   <div class="thecontent">
     <header class="sticky flex" id="global">
       <h1 class="invisible">yuhの自己紹介サイト</h1>
-      <div class="logo"><img src="/assets/logo.svg" alt="site logo"></div>
+      <div class="logo"><a href="/"><img src="/assets/logo.svg" alt="site logo"></a></div>
       <div class="menu" onclick="javascript:toggle_menu()"><img src="/assets/menu.svg" alt="menu" name="menu_button"></div>
     </header>
-    
+
     <main>
   
     </main>
