@@ -2,7 +2,7 @@
 $pageid = 'home';
 
 /* TwitterCard */
-$title = 'yuhのギャラリーサイト';
+$title = 'yuhのエッチなフォトギャラリー';
 $descri = 'エッチなフォトギャラリーを観ていただけます';
 $picurl = 'https://siteyuh.com/img/me.jpg';
 $type = 'website';

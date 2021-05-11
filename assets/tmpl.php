@@ -24,7 +24,7 @@ include 'assets/twittercard.php'; ?>
 <body>
   <div class="thecontent">
     <header class="sticky flex" id="global">
-      <h1 class="invisible">yuhの自己紹介サイト</h1>
+      <h1 class="invisible"><?=$title?></h1>
       <div class="logo"><a href="/"><img src="/assets/logo.svg" alt="site logo"></a></div>
       <div class="menu" onclick="javascript:toggle_menu()"><img src="/assets/menu.svg" alt="menu" name="menu_button"></div>
     </header>
