@@ -3,6 +3,26 @@
 }
 
 #globalnav {
-  width: 400px;
+  width:260px;
   right: 16px;
+}
+
+#profile .item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+#profile .item h3.head {
+  width: 40%;
+}
+
+#profile .item ul.detail {
+  width: 60%;
+}
+
+article.gallery ul li {
+  width: 25%;
 }

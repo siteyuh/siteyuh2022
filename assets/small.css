@@ -1,5 +1,13 @@
 #globalnav {
-  width: 90%;
+  width: calc(90% - 6rem);
   left: 50%;
   transform: translateX(-50%);
+}
+
+#profile h3.head {
+  padding-bottom: 1rem;
+}
+
+article.gallery ul li {
+  width: 33.3333%;
 }

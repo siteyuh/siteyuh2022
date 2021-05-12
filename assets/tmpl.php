@@ -30,7 +30,7 @@ include 'assets/twittercard.php'; ?>
     </header>
 
     <main>
-  
+  <?php echo $maincontent; ?>
     </main>
     
     <footer>
@@ -42,8 +42,13 @@ include 'assets/twittercard.php'; ?>
   
   <!-- オーバーレイするメニュー -->
   <nav id="globalnav">
+    <h2 class="title">gallery</h2>
+    <ul class="nav-container flex">
+      <?php include 'cat.php'; ?>
+    </ul>
+    <h2 class="title">profile</h2>
     <ul class="nav-container">
-      <li><a href=""></a></li>
+      <li><a href="profile.php">自己紹介とか連絡先</a></li>
     </ul>
   </nav>
   
