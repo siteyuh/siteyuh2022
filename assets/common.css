@@ -95,6 +95,7 @@ footer p {
 #globalnav {
   position: fixed;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: none;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
@@ -158,7 +159,7 @@ profile
 
 #profile h2.title, #contact h2.title, article.gallery h2.title  {
   padding-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
 }
 
 #profile .item ul.detail {
