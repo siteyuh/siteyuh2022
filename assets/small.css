@@ -14,6 +14,11 @@ article.gallery ul li {
   width: 33.3333%;
 }
 
+.member_wrapper {
+  top: 480px;
+
+}
+
 .member_wrapper a {
   width: 80px;
 }

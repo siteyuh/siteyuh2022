@@ -28,6 +28,16 @@ article.gallery ul li {
   width: 25%;
 }
 
+.member_wrapper {
+  top: 750px;
+
+}
+
 .member_wrapper a {
   width: 250px;
+}
+
+.big_photo {
+  max-width: 600px;
+  margin: auto;
 }

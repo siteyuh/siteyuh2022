@@ -163,6 +163,7 @@ article.gallery ul li img {
 .member_wrapper {
   width: 100%;
   overflow-x: scroll;
+  position: absolute;
 }
 
 .member_wrapper a {
@@ -172,6 +173,21 @@ article.gallery ul li img {
 .member_wrapper a img {
   width: 100%;
   object-fit: cover;
+}
+
+.big_photo {
+  display: flex;
+  -webkit-display: flex;
+  flex-flow: column;
+  -webkit-flex-flow: column;
+}
+
+.big_photo #fig_caption {
+  padding-top: 0.6em;
+  font-size: 0.8rem;
+  line-height: 1.6em;
+  text-align: center;
+  font-feature-settings: "palt";
 }
 
 /* 

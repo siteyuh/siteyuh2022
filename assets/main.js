@@ -9,3 +9,8 @@ function toggle_menu() {
     document.menu_button.src = '/assets/close.svg';
   }
 }
+
+function thumb_click(photopath, descri) {
+  document.photo.src = photopath;
+  document.getElementById("fig_caption").innerHTML = descri;
+}

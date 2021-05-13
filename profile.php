@@ -28,7 +28,7 @@ $profile_data
 <section id="contact">
 <h2 class="title">yuhと交流する</h2>
 $contact_data
-<p><a href="https://twitter.com/siteyuh">ツイッター</a>や<a href="https://instagram.com/siteyuh03">インスタグラム</a>ではDMを解放しています。</p>
+<p><a href="https://twitter.com/siteyuh">ツイッター</a>や<a href="https://instagram.com/siteyuh03">インスタグラム</a>ではDMを開放しています。</p>
 </section>
 EOM;
 
