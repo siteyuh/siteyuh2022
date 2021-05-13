@@ -135,7 +135,7 @@ footer p {
   transform: rotate(-20deg);
   font-size: 14px;
   white-space: nowrap;
-  color: #3A5C00;
+  color: #000;
 }
 /* 
 
@@ -156,14 +156,13 @@ article.gallery ul li {
 
 article.gallery ul li img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
 .member_wrapper {
   width: 100%;
   overflow-x: scroll;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .member_wrapper a {
@@ -180,6 +179,12 @@ article.gallery ul li img {
   -webkit-display: flex;
   flex-flow: column;
   -webkit-flex-flow: column;
+  height: auto;
+}
+
+.big_photo img {
+  width: 100%;
+  height: 100%;
 }
 
 .big_photo #fig_caption {
@@ -190,6 +195,10 @@ article.gallery ul li img {
   font-feature-settings: "palt";
 }
 
+.big_photo #fig_caption a {
+  font-size: 0.8rem;
+}
+
 /* 
 
 
@@ -198,12 +207,12 @@ profile
 
 
 */
-#profile, #contact, article.gallery .wrapper {
+#profile, #contact, article.gallery .wrapper, #gallery {
   width: calc(100% - 26px);
   margin: auto;
 }
 
-#profile h2.title, #contact h2.title, article.gallery h2.title  {
+#profile h2.title, #contact h2.title, article.gallery h2.title, #gallery h2.title  {
   padding-bottom: 1rem;
   font-size: 1.6rem;
   font-feature-settings: "palt";

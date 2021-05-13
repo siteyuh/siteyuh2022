@@ -12,5 +12,8 @@ function toggle_menu() {
 
 function thumb_click(photopath, descri) {
   document.photo.src = photopath;
+  if (descri == '') {
+    descri = '&nbsp;';
+  }
   document.getElementById("fig_caption").innerHTML = descri;
 }

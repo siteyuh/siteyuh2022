@@ -22,6 +22,7 @@ if ($statement = $database_handler->prepare($cat_sql)) {
     $catphoto = $cat['catphotopath'];
     echo '<li><a href="';
     echo (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].'/gallery.php?catid='.$catid;
-    echo '"><img class="nav_cat" src="https://siteyuh.com'.$catphoto.'" title="'.$catname.'"><span class="cat_title">'.$cat['ename'].'</span></a></li>';
+    echo '"><img class="nav_cat" src="https://siteyuh.com'.$catphoto.'" title="'.$catname;
+    echo '" alt="'.$catname.'"><span class="cat_title">'.$cat['ename'].'</span></a></li>';
   }
 }

@@ -4,7 +4,7 @@ $pageid = 'gallery';
 include 'assets/conn.php';
 
 if ($_GET['eventid']) {
-  # code...
+  # イベント表示
   $sql = "SELECT *  FROM `event` WHERE `eventid` = ".$_GET['eventid'];
 
   $sql_event_member = "SELECT `eventdetail`.`detailid`, `eventdetail`.`photomember`, `eventdetail`.`phdesc` FROM `event`, `eventdetail` WHERE `eventdetail`.`eventid` = `event`.`eventid` AND `event`.`eventid` = ".$_GET['eventid'];
@@ -20,13 +20,16 @@ if ($_GET['eventid']) {
       $picurl = $gallery['carousel'];
       $type = 'article';
 
-      $maincontent = '<figure class="big_photo">';
+      $maincontent .= '<section id="gallery">';
+      $maincontent .= '<h2 class="title">'.$gallery['eventname'].'</h2>';
+      $maincontent .= '<figure class="big_photo">';
       $maincontent .= '<img src="'.$gallery['carousel'];
       $maincontent .= '" name="photo">';
       $maincontent .= '<figcaption id="fig_caption">';
-      $maincontent .= $gallery['eventname'];
+      $maincontent .= $gallery['description'];
       $maincontent .= '</figcaption>';
       $maincontent .= '</figure>';
+      $maincontent .= '</section>';
     }
   }
 
@@ -48,11 +51,9 @@ if ($_GET['eventid']) {
   }
 
 } else {
-  # code...
+  # カテゴリー表示
   $sql_select_cat = "SELECT * FROM `category` WHERE `category`.`categoryid` = ".$_GET['catid'];
-  $sql_select_events = "SELECT `event`.`eventid`,  `category`.`jname`, `event`.`eventname`,`event`.`description`,`event`.`carousel` ";
-  $sql_select_events .= "FROM `event`,`category`,`associate` WHERE `category`.`categoryid` = `associate`.`categoryid` ";
-  $sql_select_events .= "AND `associate`.`eventid` = `event`.`eventid` AND `category`.`categoryid` = ".$_GET['catid'];
+  $sql_select_events = "SELECT `event`.`eventid`,  `category`.`jname`, `event`.`eventname`,`event`.`description`,`event`.`carousel` FROM `event`,`category`,`associate` WHERE `category`.`categoryid` = `associate`.`categoryid` AND `associate`.`eventid` = `event`.`eventid` AND `category`.`categoryid` = ".$_GET['catid'];
   
   if ($statement = $database_handler->prepare($sql_select_cat)) {
     $statement->execute();
@@ -79,14 +80,14 @@ EOM;
       $maincontent .= PHP_EOL.'<li><a href="';
       $maincontent .= $_SERVER['REQUEST_URI'].'&eventid=';
       $maincontent .= $category_event['eventid'];
-      $maincontent .= '"><img src="'.$category_event['carousel'].'" alt=""></a></li>';
+      $maincontent .= '"><img src="'.$category_event['carousel'].'" alt="'.$category_event['eventname'];
+      $maincontent .= '"></a></li>';
     }
     $maincontent .= '</ul></article>';
   }
 }
 ?>
-    
-  
+<h2 class="title"></h2>
 
 <?php
 

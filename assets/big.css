@@ -29,12 +29,15 @@ article.gallery ul li {
 }
 
 .member_wrapper {
-  top: 750px;
-
+  top: 800px;
 }
 
 .member_wrapper a {
   width: 250px;
+}
+
+.member_wrapper a:hover {
+  /* スクロールできるよ */
 }
 
 .big_photo {
