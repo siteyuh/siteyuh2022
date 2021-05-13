@@ -6,7 +6,11 @@ include 'assets/conn.php';
 if ($_GET['eventid']) {
   # code...
   $sql = "SELECT *  FROM `event` WHERE `eventid` = ".$_GET['eventid'];
-  
+
+  $sql_event_member = "SELECT `eventdetail`.`detailid`, `eventdetail`.`photomember`, `eventdetail`.`phdesc` ";
+  $sql_event_member .= "FROM `event`, `eventdetail` WHERE `eventdetail`.`eventid` = `event`.`eventid` ";
+  $sql_event_member .= "AND `event`.`eventid` = ".$_GET['eventid'];
+
   if ($statement = $database_handler->prepare($sql)) {
     $statement->execute();
     
@@ -19,6 +23,23 @@ if ($_GET['eventid']) {
       $type = 'article';
     }
   }
+
+  if ($statement = $database_handler->prepare($sql_event_member)) {
+    $statement->execute();
+    $members = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $maincontent .= '';
+    $maincontent .= '<div class="member_wrapper">'.PHP_EOL;
+    $maincontent .= '<ul class="event_member flex">'.PHP_EOL;
+    foreach ($members as $member) {
+      $maincontent .= '<li class=""><a href="'.$member[''];
+      $maincontent .= '"><img src="'.$member['photomember'].'s250-c';
+      $maincontent .= '" alt="'.$member[''];
+      $maincontent .= '"></a></li>';
+    }
+    $maincontent .= '</ul>'.PHP_EOL;
+    $maincontent .= '</div>'.PHP_EOL;
+  }
+
 } else {
   # code...
   $sql_select_cat = "SELECT * FROM `category` WHERE `category`.`categoryid` = ".$_GET['catid'];
@@ -48,12 +69,17 @@ if ($_GET['eventid']) {
 EOM;
     $category_events = $statement->fetchAll(PDO::FETCH_ASSOC);
     foreach ($category_events as $category_event) {
-      $maincontent .= PHP_EOL.'<li><img src="'.$category_event['carousel'].'" alt=""></li>';
+      $maincontent .= PHP_EOL.'<li><a href="';
+      $maincontent .= $_SERVER['REQUEST_URI'].'&eventid=';
+      $maincontent .= $category_event['eventid'];
+      $maincontent .= '"><img src="'.$category_event['carousel'].'" alt=""></a></li>';
     }
     $maincontent .= '</ul></article>';
   }
 }
 ?>
+    
+  
 
 <?php
 

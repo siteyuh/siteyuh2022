@@ -1,13 +1,19 @@
 #globalnav {
-  width: calc(90% - 6rem);
+  width: calc(90% - 4rem);
   left: 50%;
   transform: translateX(-50%);
+  padding: 2rem;
 }
 
 #profile h3.head {
   padding-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 article.gallery ul li {
   width: 33.3333%;
+}
+
+.member_wrapper a {
+  width: 80px;
 }

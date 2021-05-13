@@ -5,6 +5,7 @@
 #globalnav {
   width:260px;
   right: 16px;
+  padding: 3rem;
 }
 
 #profile .item {
@@ -25,4 +26,8 @@
 
 article.gallery ul li {
   width: 25%;
+}
+
+.member_wrapper a {
+  width: 250px;
 }

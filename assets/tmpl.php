@@ -23,7 +23,7 @@ include 'assets/twittercard.php'; ?>
 
 <body>
   <div class="thecontent">
-    <header class="sticky flex" id="global">
+    <header class="sticky flex spacebetween" id="global">
       <h1 class="invisible"><?=$title?></h1>
       <div class="logo"><a href="/"><img src="/assets/logo.svg" alt="site logo"></a></div>
       <div class="menu" onclick="javascript:toggle_menu()"><img src="/assets/menu.svg" alt="menu" name="menu_button"></div>
@@ -43,7 +43,7 @@ include 'assets/twittercard.php'; ?>
   <!-- オーバーレイするメニュー -->
   <nav id="globalnav">
     <h2 class="title">gallery</h2>
-    <ul class="nav-container flex">
+    <ul class="nav-container flex spacebetween">
       <?php include 'cat.php'; ?>
     </ul>
     <h2 class="title">profile</h2>
