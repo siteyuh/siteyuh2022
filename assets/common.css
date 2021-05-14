@@ -116,7 +116,10 @@ footer p {
 
 #globalnav .nav-container li {
   position: relative;
+}
 
+#globalnav .nav-container li a {
+  display: block;
 }
 
 #globalnav .nav_cat {
@@ -143,6 +146,13 @@ cat gallery
 
 
 */
+.cat_disp a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 10px;
+  margin: -10px 0 0 -10px;
+}
 
 article.gallery ul.grid {
   display: flex;
@@ -235,7 +245,7 @@ profile
 #profile .item ul.detail li {
   display: inline;
   font-feature-settings: "palt";
-  padding-left: 0.7rem;
+  padding-left: 0.5rem;
   padding-right: 1rem;
   background-image: url(/assets/tri_bullet.svg);
   background-position: center left;

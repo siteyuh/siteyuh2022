@@ -5,7 +5,7 @@ include 'assets/conn.php';
 
 if ($_GET['eventid']) {
   # イベント表示
-  $sql = "SELECT *  FROM `event` WHERE `eventid` = ".$_GET['eventid'];
+  $sql = "SELECT `event`.`eventid`, `category`.`categoryid`, `category`.`jname`, `event`.`eventname`,`event`.`description`, `event`.`carousel`, `event`.`disp` FROM `event`, `category`, `associate` WHERE `event`.`eventid` = `associate`.`eventid` AND `category`.`categoryid` = `associate`.`categoryid` AND `event`.`disp` = 1 AND `event`.`eventid` = ".$_GET['eventid'];
 
   $sql_event_member = "SELECT `eventdetail`.`detailid`, `eventdetail`.`photomember`, `eventdetail`.`phdesc` FROM `event`, `eventdetail` WHERE `eventdetail`.`eventid` = `event`.`eventid` AND `event`.`eventid` = ".$_GET['eventid'];
 
@@ -21,6 +21,8 @@ if ($_GET['eventid']) {
       $type = 'article';
 
       $maincontent .= '<section id="gallery">';
+      $maincontent .= '<p class="cat_disp"><a href="'.$_SERVER['PHP_SELF'].'?catid='.$gallery['categoryid'].'">';
+      $maincontent .= '&laquo;'.$gallery['jname'].'</a></p>';
       $maincontent .= '<h2 class="title">'.$gallery['eventname'].'</h2>';
       $maincontent .= '<figure class="big_photo">';
       $maincontent .= '<img src="'.$gallery['carousel'];
