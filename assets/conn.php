@@ -1,4 +1,8 @@
 <?php
+/* 
+参考サイト
+https://codelikes.com/php-pdo/#toc10
+*/
 $host = 'localhost';
 $username = 'siteyuh';
 $passwd = '42b05';
