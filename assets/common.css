@@ -148,10 +148,12 @@ cat gallery
 article.gallery ul.grid {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -1px;
+  line-height: 0;
 }
 
 article.gallery ul li {
-  line-height: 0;
+  margin: 0px 0px -7px 1px;
 }
 
 article.gallery ul li img {
@@ -197,6 +199,10 @@ article.gallery ul li img {
 
 .big_photo #fig_caption a {
   font-size: 0.8rem;
+}
+
+.cat_header {
+  padding-bottom: 1rem;
 }
 
 /* 

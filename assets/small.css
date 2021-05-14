@@ -11,7 +11,7 @@
 }
 
 article.gallery ul li {
-  width: 33.3333%;
+  width: calc( 33.3333% - 1px );
 }
 
 .member_wrapper {

@@ -72,7 +72,10 @@ if ($_GET['eventid']) {
     $statement->execute();
     $maincontent = <<< EOM
 <article class="gallery">
-<div class="wrapper"><h2 class="title">{$category['jname']}</h2></div>
+<div class="wrapper cat_header">
+<h2 class="title">{$category['jname']}</h2>
+<p class="descri">{$category['jdescribe']}</p>
+</div>
 <ul class="grid">
 EOM;
     $category_events = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -83,12 +86,8 @@ EOM;
       $maincontent .= '"><img src="'.$category_event['carousel'].'" alt="'.$category_event['eventname'];
       $maincontent .= '"></a></li>';
     }
-    $maincontent .= '</ul></article>';
+    $maincontent .= PHP_EOL.'</ul></article>';
   }
 }
-?>
-<h2 class="title"></h2>
-
-<?php
 
 include 'assets/tmpl.php';

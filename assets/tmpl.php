@@ -30,7 +30,7 @@ include 'assets/twittercard.php'; ?>
     </header>
 
     <main>
-  <?php echo $maincontent; ?>
+      <?php echo $maincontent.PHP_EOL; ?>
     </main>
     
     <footer>
