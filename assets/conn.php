@@ -4,9 +4,9 @@
 https://codelikes.com/php-pdo/#toc10
 */
 $host = 'localhost';
-$username = 'siteyuh';
-$passwd = '42b05';
-$dbname = 'siteyuh';
+$username = '';
+$passwd = '';
+$dbname = '';
 
 //DBに接続
 try {   
