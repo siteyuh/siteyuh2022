@@ -176,6 +176,14 @@ article.gallery ul li img {
   /* position: absolute; */
 }
 
+.member_wrapper ul.event_member li {
+  border-left: 1px solid #fff;
+}
+
+.member_wrapper ul.event_member li:first-child {
+  border-left: none;
+}
+
 .member_wrapper a {
   display: block;
 }
