@@ -2,7 +2,7 @@
 
 include 'conn.php';
 
-$cat_sql = "SELECT * FROM `category`";
+$cat_sql = "SELECT * FROM `cat`";
 
 /* 
 categoryid
@@ -22,7 +22,7 @@ if ($statement = $database_handler->prepare($cat_sql)) {
     $catphoto = $cat['catphotopath'];
     echo '<li><a href="';
     echo (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].'/gallery.php?catid='.$catid;
-    echo '"><img class="nav_cat" src="https://siteyuh.com'.$catphoto.'" title="'.$descri;
+    echo '"><img class="nav_cat" src="'.$catphoto.'" title="'.$descri;
     echo '" alt="'.$catname.'"><span class="cat_title">'.$cat['ename'].'</span></a></li>';
   }
 }
