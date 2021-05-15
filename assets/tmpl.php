@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <?php
 include 'assets/twittercard.php'; ?>
   <title><?=$title?></title>
@@ -35,7 +36,7 @@ include 'assets/twittercard.php'; ?>
     
     <footer>
       <p class="white small">
-        Copyright All Rights Reserved.
+        Copyright yuh 2021 All Rights Reserved.
       </p>
     </footer>
   </div>
