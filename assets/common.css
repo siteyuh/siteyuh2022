@@ -59,6 +59,7 @@ header {
   height: 55px;
   margin: 0;
   padding: 0;
+  z-index: 1000;
 }
 
 header .logo {
@@ -80,6 +81,7 @@ header .menu img {
 main {
   padding-top: 2rem;
   min-height: calc(100vh - 48px - 28px - 1rem - 4rem);/* 画面の高さ - ヘッダの高さ - フッタの高さ - フッタの下マージン - mainの上下マージン */
+  min-height:calc(var(--vh,1vh) * 100 - 48px - 28px - 1rem - 4rem);/* https://coliss.com/articles/build-websites/operation/css/viewport-units-on-mobile.html */
   padding-bottom: 2rem;
 }
 
@@ -139,6 +141,39 @@ footer p {
   white-space: nowrap;
   color: #000;
 }
+
+/* 
+
+Top
+
+*/
+ul.category_images {
+  position: relative;
+  margin: auto;
+}
+
+ul.category_images li {
+  position: absolute;
+}
+
+ul.category_images li.cat1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+ul.category_images li.cat2 {
+  left: 0;
+}
+
+ul.category_images li.cat3 {
+  right: 0;
+}
+
+ul.category_images li a {
+  display: block;
+}
+
 /* 
 
 

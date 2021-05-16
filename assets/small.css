@@ -22,3 +22,21 @@ article.gallery ul li {
 .member_wrapper a {
   width: 80px;
 }
+
+ul.category_images {
+  width: 100%;
+  max-width: 360px;
+}
+
+ul.category_images li a img {
+  border-radius: 78px;
+  width: 156px;
+}
+
+ul.category_images li.cat2 {
+  top: 156px;
+}
+
+ul.category_images li.cat3 {
+  top: 156px;
+}

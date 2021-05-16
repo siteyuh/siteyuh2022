@@ -41,3 +41,21 @@ article.gallery ul li {
   margin: auto;
   padding-bottom: 1rem;
 }
+
+ul.category_images {
+  width: 100%;
+  max-width: 640px;
+}
+
+ul.category_images li a img {
+  border-radius: 150px;
+  width: 300px;
+}
+
+ul.category_images li.cat2 {
+  top: 300px;
+}
+
+ul.category_images li.cat3 {
+  top: 300px;
+}
