@@ -44,7 +44,9 @@ article.gallery ul li {
 
 ul.category_images {
   width: 100%;
-  max-width: 640px;
+  max-width: 660px;
+  height: calc(300px * 3);
+
 }
 
 ul.category_images li a img {

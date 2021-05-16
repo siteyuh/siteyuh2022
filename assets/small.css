@@ -26,6 +26,7 @@ article.gallery ul li {
 ul.category_images {
   width: 100%;
   max-width: 360px;
+  height: calc(156px * 3);
 }
 
 ul.category_images li a img {

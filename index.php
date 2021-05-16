@@ -7,7 +7,6 @@ $cat_sql = "SELECT * FROM `cat`";
 if ($statement = $database_handler->prepare($cat_sql)) {
   $statement->execute();
   $categories = $statement->fetchAll(PDO::FETCH_ASSOC);
-  $maincontent = '<span class="dammy"><br></span>';
   $maincontent .= '<ul class="category_images">'.PHP_EOL;
   foreach ($categories as $cat) {
     // strstr($string, '.co', true)
