@@ -7,6 +7,7 @@ $cat_sql = "SELECT * FROM `cat`";
 if ($statement = $database_handler->prepare($cat_sql)) {
   $statement->execute();
   $categories = $statement->fetchAll(PDO::FETCH_ASSOC);
+  $maincontent = '<span class="dammy"><br></span>';
   $maincontent .= '<ul class="category_images">'.PHP_EOL;
   foreach ($categories as $cat) {
     // strstr($string, '.co', true)
@@ -19,6 +20,9 @@ if ($statement = $database_handler->prepare($cat_sql)) {
     $maincontent .= '" alt="';
     $maincontent .= $cat['jdescribe'];
     $maincontent .= '"></a></li>'.PHP_EOL;
+    $maincontent .= '<li class="prof"><a href="/profile.php"><img src="assets/profile.svg';
+    $maincontent .= '" alt="profile';
+    $maincontent .= '"></a></li>';
     $maincontent .= '';
   }
   $maincontent .= '</ul>'.PHP_EOL;

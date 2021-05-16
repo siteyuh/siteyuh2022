@@ -21,7 +21,7 @@ if ($statement = $database_handler->prepare($cat_sql)) {
     $descri = $cat['jdescribe'];
     $catphoto = $cat['catphotopath'];
     echo '<li><a href="';
-    echo (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].'/gallery.php?catid='.$catid;
+    echo '/gallery.php?catid='.$catid;
     echo '"><img class="nav_cat" src="'.$catphoto.'" title="'.$descri;
     echo '" alt="'.$catname.'"><span class="cat_title">'.$cat['ename'].'</span></a></li>';
   }

@@ -36,7 +36,7 @@ include 'assets/twittercard.php'; ?>
     
     <footer>
       <p class="white small">
-        Copyright yuh 2021 All Rights Reserved.
+        Copyright yuh 2022 All Rights Reserved.
       </p>
     </footer>
   </div>
