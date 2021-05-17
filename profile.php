@@ -4,7 +4,7 @@ $pageid = 'profile';
 /* TwitterCard */
 $title = 'プロフィール | yuhのエッチなフォトギャラリー';
 $descri = 'エッチなフォトギャラリーを観てください';
-$picurl = 'https://siteyuh.com/img/me.jpg';
+$picurl = 'https://siteyuh.com/_assets/me@2x.jpg';
 $type = 'article';
 
 /* Profile */

@@ -30,7 +30,7 @@ if ($statement = $database_handler->prepare($cat_sql)) {
 /* TwitterCard */
 $title = 'yuhのエッチなフォトギャラリー';
 $descri = 'エッチなフォトギャラリーを観てください';
-$picurl = 'https://siteyuh.com/img/me.jpg';
+$picurl = 'https://siteyuh.com/_assets/me@2x.jpg';
 $type = 'website';
 
 

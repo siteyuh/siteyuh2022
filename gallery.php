@@ -54,22 +54,23 @@ if ($_GET['eventid']) {
 
 } else {
   # カテゴリー表示
-  $sql_select_cat = "SELECT * FROM `category` WHERE `category`.`categoryid` = ".$_GET['catid'];
-  $sql_select_events = "SELECT `event`.`eventid`,  `category`.`jname`, `event`.`eventname`,`event`.`description`,`event`.`carousel` FROM `event`,`category`,`associate` WHERE `category`.`categoryid` = `associate`.`categoryid` AND `associate`.`eventid` = `event`.`eventid` AND `category`.`categoryid` = ".$_GET['catid'];
+  $sql_select_cat = "SELECT * FROM `cat` WHERE `cat`.`categoryid` = ".$_GET['catid'];
   
   if ($statement = $database_handler->prepare($sql_select_cat)) {
     $statement->execute();
-
+    
     $categories = $statement->fetchAll(PDO::FETCH_ASSOC);
     foreach ($categories as $category) {
       /* TwitterCard */
       $title = $category['jname'].' | yuhのエッチなフォトギャラリー';
       $descri = $category['jdescribe'];
-      $picurl = 'https://siteyuh.com'.$category['catphotopath'];
+      $picurl = $category['catphotopath'];
       $type = 'article';
-
+      
     }
   }
+
+  $sql_select_events = "SELECT `event`.`eventid`,  `cat`.`jname`, `event`.`eventname`,`event`.`description`,`event`.`carousel` FROM `event`,`cat`,`associate` WHERE `cat`.`categoryid` = `associate`.`categoryid` AND `associate`.`eventid` = `event`.`eventid` AND `cat`.`categoryid` = ".$_GET['catid'];
   if ($statement = $database_handler->prepare($sql_select_events)) {
     $statement->execute();
     $maincontent = <<< EOM
