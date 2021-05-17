@@ -298,8 +298,8 @@ profile
 #profile .item ul.detail li {
   display: inline;
   font-feature-settings: "palt";
-  padding-left: 0.5rem;
-  padding-right: 1rem;
+  padding-left: 6px;
+  padding-right: 3px;
   background-image: url(/assets/tri_bullet.svg);
   background-position: center left;
   background-repeat: no-repeat;
