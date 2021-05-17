@@ -1,6 +1,6 @@
 <?php
 
-$selfurl = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$selfurl = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 
 echo '<meta name="twitter:card" content="summary">'.PHP_EOL;
 echo '<meta name="twitter:site" content="@siteyuh">'.PHP_EOL;

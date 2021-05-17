@@ -18,7 +18,9 @@ function thumb_click(photopath, descri) {
   document.getElementById("fig_caption").innerHTML = descri;
 }
 
-/* https://coliss.com/articles/build-websites/operation/css/viewport-units-on-mobile.html */
+/* https://coliss.com/articles/build-websites/operation/css/viewport-units-on-mobile.html 
+コンテンツの高さを画面の高さに合わせる
+*/
 // 最初に、ビューポートの高さを取得し、0.01を掛けて1%の値を算出して、vh単位の値を取得
 let vh=window.innerHeight * 0.01;
 // カスタム変数--vhの値をドキュメントのルートに設定

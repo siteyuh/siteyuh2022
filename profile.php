@@ -16,9 +16,6 @@ for ( $i = 1; $i < sizeof( $result ); $i++ ) {
 // var_dump ($profile_data);
 
 /* contact */
-?>
-
-<?php
 
 $maincontent = <<< EOM
 <section id="profile">

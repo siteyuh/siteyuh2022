@@ -21,7 +21,8 @@ if ($_GET['eventid']) {
       $type = 'article';
 
       $maincontent .= '<section id="gallery">';
-      $maincontent .= '<p class="cat_disp"><a href="'.$_SERVER['PHP_SELF'].'?catid='.$gallery['categoryid'].'">';
+      $maincontent .= '<p class="cat_disp"><a href="';
+      $maincontent .= $_SERVER['PHP_SELF'].'?catid='.$gallery['categoryid'].'">';
       $maincontent .= '&laquo;'.$gallery['jname'].'</a></p>';
       $maincontent .= '<h2 class="title">'.$gallery['eventname'].'</h2>';
       $maincontent .= '<figure class="big_photo">';
@@ -42,7 +43,8 @@ if ($_GET['eventid']) {
     $maincontent .= '<div class="member_wrapper">'.PHP_EOL;
     $maincontent .= '<ul class="event_member flex">'.PHP_EOL;
     foreach ($members as $member) {
-      $maincontent .= '<li class=""><a href="javascript:thumb_click(\''.$member['photomember'].'s600-c\', \'';
+      $maincontent .= '<li class=""><a href="javascript:thumb_click(\'';
+      $maincontent .= $member['photomember'].'s600-c\', \'';
       $maincontent .= $member['phdesc'];
       $maincontent .= '\')"><img src="'.$member['photomember'].'s250-c';
       $maincontent .= '" alt="'.$member['phdesc'];
@@ -71,6 +73,7 @@ if ($_GET['eventid']) {
   }
 
   $sql_select_events = "SELECT `event`.`eventid`,  `cat`.`jname`, `event`.`eventname`,`event`.`description`,`event`.`carousel` FROM `event`,`cat`,`associate` WHERE `cat`.`categoryid` = `associate`.`categoryid` AND `associate`.`eventid` = `event`.`eventid` AND `cat`.`categoryid` = ".$_GET['catid'];
+  
   if ($statement = $database_handler->prepare($sql_select_events)) {
     $statement->execute();
     $maincontent = <<< EOM
