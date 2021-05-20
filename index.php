@@ -33,5 +33,4 @@ $descri = 'エッチなフォトギャラリーを観てください';
 $picurl = 'https://siteyuh.com/_assets/me@2x.jpg';
 $type = 'website';
 
-
 include 'assets/tmpl.php';
