@@ -21,7 +21,7 @@ if ($statement = $database_handler->prepare($cat_sql)) {
     $maincontent .= '"></a></li>'.PHP_EOL;
     $maincontent .= '<li class="prof"><a href="/profile.php"><img src="assets/profile.svg';
     $maincontent .= '" alt="profile';
-    $maincontent .= '"></a></li>';
+    $maincontent .= '"></a></li>'.PHP_EOL;
     $maincontent .= '';
   }
   $maincontent .= '</ul>'.PHP_EOL;
