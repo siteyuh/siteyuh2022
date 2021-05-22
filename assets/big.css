@@ -65,3 +65,7 @@ ul.category_images li.cat3 {
 ul.category_images li.prof {
   top: 600px;
 }
+
+a > img:hover {
+  filter: opacity(0.5);
+}
