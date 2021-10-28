@@ -218,11 +218,13 @@ article.gallery ul li img {
 .member_wrapper {
   width: 100%;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
   /* position: absolute; */
 }
 
 .member_wrapper ul.event_member li {
   border-left: 1px solid #fff;
+  scroll-snap-align: start;
 }
 
 .member_wrapper ul.event_member li:first-child {
